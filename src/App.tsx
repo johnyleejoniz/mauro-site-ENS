@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import { motion } from 'motion/react';
 import { 
   Car, 
@@ -14,7 +14,9 @@ import {
   Phone,
   Mail,
   FileText,
-  Lock
+  Lock,
+  Play,
+  Pause
 } from 'lucide-react';
 
 const FadeIn = ({ children, delay = 0, className = '' }: { children: React.ReactNode, delay?: number, className?: string, key?: React.Key }) => (
@@ -30,6 +32,20 @@ const FadeIn = ({ children, delay = 0, className = '' }: { children: React.React
 );
 
 export default function App() {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const togglePlay = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+      } else {
+        videoRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-[#1E2326] text-white font-sans selection:bg-[#51B5B1] selection:text-white">
       {/* Header */}
@@ -99,16 +115,29 @@ export default function App() {
             {/* Phone-like Frame */}
             <div className="relative p-2 rounded-[2.5rem] bg-gradient-to-br from-[#2A3035] to-[#1A1D20] border border-[#51B5B1]/50 shadow-2xl">
               {/* Inner Video Area */}
-              <div className="relative rounded-[2rem] overflow-hidden aspect-[9/16] bg-[#000] shadow-[inset_0_0_20px_rgba(0,0,0,1)]">
+              <div 
+                className="relative rounded-[2rem] overflow-hidden aspect-[9/16] bg-[#000] shadow-[inset_0_0_20px_rgba(0,0,0,1)] group/video cursor-pointer"
+                onClick={togglePlay}
+              >
                 <video 
+                  ref={videoRef}
                   className="w-full h-full object-cover"
-                  controls
                   playsInline
+                  loop
+                  onPlay={() => setIsPlaying(true)}
+                  onPause={() => setIsPlaying(false)}
                   poster="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=600&auto=format&fit=crop"
                 >
                   <source src="https://fvshysxuamdatyugdipx.supabase.co/storage/v1/object/public/video%20teste/smove-reabilitacao_wHTyvbHd.mp4" type="video/mp4" />
                   Seu navegador não suporta a tag de vídeo.
                 </video>
+
+                {/* Play/Pause Button Overlay */}
+                <div className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${isPlaying ? 'opacity-0 group-hover/video:opacity-100 bg-black/20' : 'opacity-100 bg-black/40'}`}>
+                  <div className="w-16 h-16 flex items-center justify-center rounded-full bg-[#51B5B1] text-white shadow-[0_0_30px_rgba(81,181,177,0.5)] transform transition-transform hover:scale-110">
+                    {isPlaying ? <Pause className="w-8 h-8" /> : <Play className="w-8 h-8 ml-1" />}
+                  </div>
+                </div>
               </div>
             </div>
           </motion.div>
