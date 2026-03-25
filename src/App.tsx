@@ -128,7 +128,7 @@ export default function App() {
                   onPause={() => setIsPlaying(false)}
                   poster="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=600&auto=format&fit=crop"
                 >
-                  <source src="https://fvshysxuamdatyugdipx.supabase.co/storage/v1/object/public/video%20teste/smove-reabilitacao_wHTyvbHd.mp4" type="video/mp4" />
+                  <source src="https://fvshysxuamdatyugdipx.supabase.co/storage/v1/object/public/video%20teste/0325.mp4" type="video/mp4" />
                   Seu navegador não suporta a tag de vídeo.
                 </video>
 
