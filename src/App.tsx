@@ -59,9 +59,14 @@ export default function App() {
               referrerPolicy="no-referrer"
             />
           </div>
-          <button className="hidden md:flex px-6 py-2.5 bg-[#51B5B1] hover:bg-[#3E9B97] text-white font-medium rounded-full transition-all duration-300 transform hover:scale-105 shadow-[0_0_15px_rgba(81,181,177,0.3)]">
+          <a 
+            href="https://wa.me/554288339046"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden md:flex px-6 py-2.5 bg-[#51B5B1] hover:bg-[#3E9B97] text-white font-medium rounded-full transition-all duration-300 transform hover:scale-105 shadow-[0_0_15px_rgba(81,181,177,0.3)]"
+          >
             Quero minha licença
-          </button>
+          </a>
         </div>
       </header>
 
@@ -148,12 +153,22 @@ export default function App() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <button className="w-full sm:w-auto px-8 py-4 bg-[#51B5B1] hover:bg-[#3E9B97] text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105 shadow-[0_0_20px_rgba(81,181,177,0.4)] flex items-center justify-center gap-2 text-lg">
+            <a 
+              href="https://wa.me/554288339046"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto px-8 py-4 bg-[#51B5B1] hover:bg-[#3E9B97] text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105 shadow-[0_0_20px_rgba(81,181,177,0.4)] flex items-center justify-center gap-2 text-lg"
+            >
               Quero minha licença <ArrowRight className="w-5 h-5" />
-            </button>
-            <button className="w-full sm:w-auto px-8 py-4 bg-[#2A3035] hover:bg-[#353C42] text-white font-semibold rounded-full transition-colors border border-gray-700 flex items-center justify-center gap-2 text-lg">
+            </a>
+            <a 
+              href="https://wa.me/554288339046"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto px-8 py-4 bg-[#2A3035] hover:bg-[#353C42] text-white font-semibold rounded-full transition-colors border border-gray-700 flex items-center justify-center gap-2 text-lg"
+            >
               Falar com especialista <MessageCircle className="w-5 h-5" />
-            </button>
+            </a>
           </motion.div>
         </div>
       </section>
@@ -353,12 +368,22 @@ export default function App() {
               Entre para um modelo de negócio completo, com múltiplas fontes de receita e alto potencial de crescimento.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <button className="w-full sm:w-auto px-10 py-5 bg-[#51B5B1] hover:bg-[#3E9B97] text-white font-bold rounded-full transition-all duration-300 transform hover:scale-105 shadow-[0_0_30px_rgba(81,181,177,0.4)] flex items-center justify-center gap-3 text-lg">
+              <a 
+                href="https://wa.me/554288339046"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto px-10 py-5 bg-[#51B5B1] hover:bg-[#3E9B97] text-white font-bold rounded-full transition-all duration-300 transform hover:scale-105 shadow-[0_0_30px_rgba(81,181,177,0.4)] flex items-center justify-center gap-3 text-lg"
+              >
                 Quero minha licença agora <ArrowRight className="w-6 h-6" />
-              </button>
-              <button className="w-full sm:w-auto px-10 py-5 bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold rounded-full transition-all duration-300 transform hover:scale-105 shadow-[0_0_30px_rgba(37,211,102,0.3)] flex items-center justify-center gap-3 text-lg">
+              </a>
+              <a 
+                href="https://wa.me/554288339046"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto px-10 py-5 bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold rounded-full transition-all duration-300 transform hover:scale-105 shadow-[0_0_30px_rgba(37,211,102,0.3)] flex items-center justify-center gap-3 text-lg"
+              >
                 Falar no WhatsApp <MessageCircle className="w-6 h-6" />
-              </button>
+              </a>
             </div>
           </FadeIn>
         </div>
@@ -389,10 +414,10 @@ export default function App() {
                   <MapPin className="w-4 h-4 text-[#51B5B1]" /> S-MOVE Mobilidade
                 </li>
                 <li className="flex items-center gap-3 text-[#A0AAB2] text-sm">
-                  <Phone className="w-4 h-4 text-[#51B5B1]" /> Contato / WhatsApp
+                  <Phone className="w-4 h-4 text-[#51B5B1]" /> +55 42 8833-9046
                 </li>
                 <li className="flex items-center gap-3 text-[#A0AAB2] text-sm">
-                  <Mail className="w-4 h-4 text-[#51B5B1]" /> Email
+                  <Mail className="w-4 h-4 text-[#51B5B1]" /> suporte@smovemobilidade.com.br
                 </li>
               </ul>
             </div>
